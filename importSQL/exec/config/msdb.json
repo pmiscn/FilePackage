@@ -1,0 +1,13 @@
+{      
+  	Type:"MSSQL",
+	Server:{
+	  Server:"127.0.0.1",
+	  Username:"sa",
+	  Password:"1234",
+	  Database:"Users"
+	}, 
+	Exception:{
+	  Retry:1,
+	  Sleep:1
+	}
+}

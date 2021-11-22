@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.237,E:\faname\FanameWeb\FilePackage\importSQL\Mu.TimerTask.pas=E:\faname\FanameWeb\FilePackage\importSQL\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.735,=E:\faname\FanameWeb\FilePackage\importSQL\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.066,=E:\faname\FanameWeb\FilePackage\importSQL\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.131,E:\faname\FanameWeb\FilePackage\importSQL\Mu.FilePackage.importSQL.pas=E:\faname\FanameWeb\FilePackage\importSQL\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.864,E:\faname\FanameWeb\FilePackage\importSQL\FrmSqlImport.dfm=C:\Users\amu\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.864,E:\faname\FanameWeb\FilePackage\importSQL\FrmSqlImport.pas=C:\Users\amu\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.968,=C:\Users\amu\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.532,=C:\Users\amu\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.153,E:\faname\FanameWeb\FilePackage\importSQL\SQLImport.dproj=C:\Users\amu\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.750,E:\faname\FanameWeb\FilePackage\importSQL\MFP.importSQL.pas=E:\faname\FanameWeb\FilePackage\importSQL\Mu.FilePackage.importSQL.pas</Transaction>
+  </Transactions>
+</BorlandProject>

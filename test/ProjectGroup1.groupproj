@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F992E828-F946-40ED-99DA-41593EAF71E9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="mpkg.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Project1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\view\mpkgVIew.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\importSQL\SQLImport.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="mpkg">
+        <MSBuild Projects="mpkg.dproj"/>
+    </Target>
+    <Target Name="mpkg:Clean">
+        <MSBuild Projects="mpkg.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="mpkg:Make">
+        <MSBuild Projects="mpkg.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project1">
+        <MSBuild Projects="Project1.dproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="Project1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="Project1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="mpkgVIew">
+        <MSBuild Projects="..\view\mpkgVIew.dproj"/>
+    </Target>
+    <Target Name="mpkgVIew:Clean">
+        <MSBuild Projects="..\view\mpkgVIew.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="mpkgVIew:Make">
+        <MSBuild Projects="..\view\mpkgVIew.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SQLImport">
+        <MSBuild Projects="..\importSQL\SQLImport.dproj"/>
+    </Target>
+    <Target Name="SQLImport:Clean">
+        <MSBuild Projects="..\importSQL\SQLImport.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SQLImport:Make">
+        <MSBuild Projects="..\importSQL\SQLImport.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="mpkg;Project1;mpkgVIew;SQLImport"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="mpkg:Clean;Project1:Clean;mpkgVIew:Clean;SQLImport:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="mpkg:Make;Project1:Make;mpkgVIew:Make;SQLImport:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

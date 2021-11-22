@@ -1,0 +1,46 @@
+{
+tasks:[
+	{
+		Timer:{
+			Type:"Interval", // Plan Interval  当Interval的时候，只要任务栏是空白的，就一定间隔执行
+			Plan:"1/2 * * 3 * *" ,
+			Interval:10,
+			EmptySleep:60000 
+		}, 
+		Get:{
+			Type:"Database", // Database DB http plugin file 
+			Config:{
+				SaveType:"MSSQL",
+				Server:{
+				  Server:"192.168.254.162",
+				  Username:"sa",
+				  Password:"1234",
+				  Database:"Site_his"
+				},
+				SQL:"Site_his.dbo.[P_ExportData_cpc]",
+				Type:"procjson", 
+				Exception:{
+				  Retry:5,
+				  Sleep:5
+				}
+			},
+			ParamesValues:{ 
+				@Count:50
+			}
+		}, 
+			 
+		Package:{
+			FileName:"2014cpc.mpkg",
+			FileExt:"json",
+			DataField:"data",
+			FilenameField:"cpc",
+			FileExtField:"",
+			Zip:true,
+			
+		}
+	}
+
+
+]
+
+}
